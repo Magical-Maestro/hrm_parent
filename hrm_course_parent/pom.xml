@@ -9,11 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hrm_support_parent</artifactId>
+    <artifactId>hrm_course_parent</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>hrm_eureka_8686</module>
-        <module>hrm_zuul_1024</module>
-        <module>hrm_config_server_2048</module>
+        <module>hrm_course_api</module>
+        <module>hrm_course_service</module>
     </modules>
+
+
 </project>

@@ -1,19 +1,24 @@
-server:
-  port: 9527
-spring:
-  application:
-    name: hrm-management
-  datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/hrm_manage
-        username: root
-        password: 666666
-  mybatis-plus:
-    mapper-locations: classpath:cn/wq/hrm/mapper/*Mapper.xml
-    type-aliases-package: cn.wq.hrm.domain,cn.wq.hrm.query
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8686/eureka
   instance:
     prefer-ip-address: true
+spring:
+  cloud:
+    config:
+      #配置服务器(单机配置configserver)
+      #uri: http://localhost:2048
+      #从eureka上面找配置服务
+      discovery:
+        enabled: true
+        #指定服务名
+        service-id: config-server
+      #分支(GitHub中Branch:master)
+      label: master
+      #GitHub中分支中的配置文件
+      name: application-management
+      #环境配置
+      profile: ${spring.profiles.active}
+  profiles:
+    active: dev

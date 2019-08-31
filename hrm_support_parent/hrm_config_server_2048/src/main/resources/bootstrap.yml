@@ -1,0 +1,18 @@
+server:
+  port: 2048
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Magical-Maestro/hrm_config.git
+          username: Magical-Maestro
+          password: wq520yzhm1988
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8686/eureka
+  instance:
+    prefer-ip-address: true

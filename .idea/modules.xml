@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hrm_basic_parent/hrm_basic_parent.iml" filepath="$PROJECT_DIR$/hrm_basic_parent/hrm_basic_parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm_basic_parent/hrm_basic_util/hrm_basic_util.iml" filepath="$PROJECT_DIR$/hrm_basic_parent/hrm_basic_util/hrm_basic_util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm_support_parent/hrm_config_server_2048/hrm_config_server_2048.iml" filepath="$PROJECT_DIR$/hrm_support_parent/hrm_config_server_2048/hrm_config_server_2048.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm_course_parent/hrm_course_api/hrm_course_api.iml" filepath="$PROJECT_DIR$/hrm_course_parent/hrm_course_api/hrm_course_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm_course_parent/hrm_course_parent.iml" filepath="$PROJECT_DIR$/hrm_course_parent/hrm_course_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm_course_parent/hrm_course_service/hrm_course_service.iml" filepath="$PROJECT_DIR$/hrm_course_parent/hrm_course_service/hrm_course_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm_support_parent/hrm_eureka_8686/hrm_eureka_8686.iml" filepath="$PROJECT_DIR$/hrm_support_parent/hrm_eureka_8686/hrm_eureka_8686.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm_management_parent/hrm_management_api/hrm_management_api.iml" filepath="$PROJECT_DIR$/hrm_management_parent/hrm_management_api/hrm_management_api.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm_management_parent/hrm_management_parent.iml" filepath="$PROJECT_DIR$/hrm_management_parent/hrm_management_parent.iml" />
