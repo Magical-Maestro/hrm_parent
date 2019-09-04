@@ -22,6 +22,10 @@ public class BaseQuery {
         this.keyword = keyword;
     }
 
+    /*public Integer getStart(){
+        return (this.page-1)*rows;
+    }*/
+
     public Integer getPage() {
         return page;
     }

@@ -1,5 +1,6 @@
 package cn.wq.hrm.domain;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -29,8 +30,12 @@ public class CourseType extends Model<CourseType> {
     private String name;
     /**
      * 父ID
+     * @TableField(exist = false):
+     *      数据库没有字段和他匹配,就是用来存储关联查询值
      */
     private Long pid;
+    @TableField(exist = false)
+    private CourseType ptype;
     /**
      * 图标
      */
@@ -128,6 +133,14 @@ public class CourseType extends Model<CourseType> {
 
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
+    }
+
+    public CourseType getPtype() {
+        return ptype;
+    }
+
+    public void setPtype(CourseType ptype) {
+        this.ptype = ptype;
     }
 
     @Override

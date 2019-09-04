@@ -19,7 +19,7 @@ public interface CourseTypeClient {
      * @param courseType  传递的实体
      * @return Ajaxresult转换结果
      */
-    @RequestMapping(value="/save",method= RequestMethod.POST)
+    @RequestMapping(value="/save",method= RequestMethod.PUT)
     AjaxResult save(CourseType courseType);
 
     /**

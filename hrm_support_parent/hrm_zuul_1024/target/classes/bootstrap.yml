@@ -1,0 +1,26 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8686/eureka
+  instance:
+    instance-id: gateway-1024.com
+    #显示客户端真实ip
+    prefer-ip-address: true
+spring:
+  cloud:
+    config:
+      #配置服务器(单机配置configserver)
+      #uri: http://localhost:2048
+      #从eureka上面找配置服务
+      discovery:
+        enabled: true
+        #指定服务名
+        service-id: config-server
+      #分支(GitHub中Branch:master)
+      label: master
+      #GitHub中分支中的配置文件
+      name: application-zuul
+      #环境配置
+      profile: ${spring.profiles.active}
+  profiles:
+    active: dev

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 //分页对象：easyui只需两个属性，total(总数),datas（分页数据）就能实现分页
 public class PageList<T> {
-    private long total;
+    private Long total;
     private List<T> rows = new ArrayList<>();
 
-    public long getTotal() {
+    public Long getTotal() {
         return total;
     }
 
@@ -32,7 +32,7 @@ public class PageList<T> {
     }
 
     //提供有参构造方法，方便测试
-    public PageList(long total, List<T> rows) {
+    public PageList(Long total, List<T> rows) {
         this.total = total;
         this.rows = rows;
     }

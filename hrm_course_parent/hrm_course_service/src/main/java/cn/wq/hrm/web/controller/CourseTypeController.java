@@ -22,7 +22,7 @@ public class CourseTypeController {
     * @param courseType  传递的实体
     * @return Ajaxresult转换结果
     */
-    @RequestMapping(value="/save",method= RequestMethod.POST)
+    @RequestMapping(value="/save",method= RequestMethod.PUT)
     public AjaxResult save(@RequestBody CourseType courseType){
         try {
             if(courseType.getId()!=null){
@@ -81,8 +81,13 @@ public class CourseTypeController {
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public PageList<CourseType> json(@RequestBody CourseTypeQuery query)
     {
-        Page<CourseType> page = new Page<CourseType>(query.getPage(),query.getRows());
-            page = courseTypeService.selectPage(page);
-            return new PageList<CourseType>(page.getTotal(),page.getRecords());
+//        Page<CourseType> page = new Page<CourseType>(query.getPage(),query.getRows());
+//        System.out.println("page============"+ page);
+//        page = courseTypeService.selectPage(page);
+//        return new PageList<CourseType>(page.getTotal(),page.getRecords());
+        /*
+         * 高级查询+分页+关联查询
+         * */
+        return courseTypeService.selectListPage(query);
     }
 }
